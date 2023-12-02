@@ -1,0 +1,600 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<div class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="intro-wrap">
+                    <h1 class="mb-5"><span class="d-block">Let's Enjoy Your</span> Trip In <span class="typed-words"></span></h1>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="form">
+
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
+                                        <label for="inputCity">Choose Your Destination</label>
+                                        <input name="destination" type="text" class=" form-control custom-select" id="inputCity" placeholder="Type your destination...">
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
+                                        <label for="inputCheckIn">Check  In  &  out Date</label>
+                                        <input type="text" class="form-control" name="daterange" id="inputCheckIn">
+                                    </div>
+
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3" style="margin-bottom: 20px;">
+
+                                        <label for="inputChildren" style="display: block; font-weight: bold; margin-bottom: 5px;">Adult</label>
+
+                                        <select name="adult" class="form-control tm-select" id="inputadult" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; color: #333; cursor: pointer;">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                    <br /><br /><br />
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3" style="margin-bottom: 20px;">
+
+                                        <label for="inputadult" style="display: block; font-weight: bold; margin-bottom: 5px;">Children</label>
+
+                                        <select name="adult" class="form-control tm-select" id="inputchildren" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; color: #333; cursor: pointer;">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
+                                        <label for="inputRoom">How many rooms?</label>
+                                        <select name="room" class="form-control tm-select" id="inputRoom">
+                                            <option value="0" selected>0 Room</option>
+                                            <option value="">1 Rooms</option>
+                                            <option value="2">2 Rooms</option>
+                                            <option value="3">3 Rooms</option>
+                                            <option value="4">4 Rooms</option>
+                                            <option value="5">5 Rooms</option>
+                                            <option value="6">6 Rooms</option>
+                                            <option value="7">7 Rooms</option>
+                                            <option value="8">8 Rooms</option>
+                                            <option value="9">9 Rooms</option>
+                                            <option value="10">10 Rooms</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
+
+
+                                        <a href="/Home/Flight" class="btn btn-primary py-md-3 px-md-5 mt-2">Search</a>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <label class="control control--checkbox mt-3">
+                                            <span class="caption">Save this search</span>
+                                            <input type="checkbox" checked="checked" />
+                                            <div class="control__indicator"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="slides">
+                    <img src="~/images/hero-slider-1.jpg" alt="Image" class="img-fluid active">
+                    <img src="~/images/hero-slider-2.jpg" alt="Image" class="img-fluid">
+                    <img src="~/images/hero-slider-3.jpg" alt="Image" class="img-fluid">
+                    <img src="~/images/hero-slider-4.jpg" alt="Image" class="img-fluid">
+                    <img src="~/images/hero-slider-5.jpg" alt="Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="untree_co-section">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-6 text-center">
+                <h2 class="section-title text-center mb-3">Our Services</h2>
+                <p>Your expert travel guide, offering top-notch guest facilitation and comprehensive trip management—from vehicles to hotel bookings, air tickets, and expenses, we've got it all covered for your seamless journey!</p>
+            </div>
+        </div>
+        <div class="row align-items-stretch">
+            <div class="col-lg-4 order-lg-1">
+                <div class="h-100">
+                    <div class="frame h-100">
+                        <div class="feature-img-bg h-100" style="background-image: url('https://kumailandtouragencybaltistantravel.files.wordpress.com/2023/11/1701358128504.jpg'); "></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
+
+                <div class="feature-1 d-md-flex">
+                    <div class="align-self-center">
+                        <span class="flaticon-house display-4 text-primary"></span>
+                        <h3>Hotels</h3>
+                        <p class="mb-0">We select top hotels to make your trip memorable.</p>
+                    </div>
+                </div>
+
+                <div class="feature-1 ">
+                    <div class="align-self-center">
+                        <span class="flaticon-restaurant display-4 text-primary"></span>
+                        <h3>Restaurants & Cafe</h3>
+                        <p class="mb-0">You'll have a variety of dishes available according to your preferences for dining and drinks.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
+
+                <div class="feature-1 d-md-flex">
+                    <div class="align-self-center">
+                        <span class="flaticon-mail display-4 text-primary"></span>
+                        <h3>Easy to Connect</h3>
+                        <p class="mb-0">Easily reachable for any queries or assistance.</p>
+                    </div>
+                </div>
+
+                <div class="feature-1 d-md-flex">
+                    <div class="align-self-center">
+                        <span class="flaticon-phone-call display-4 text-primary"></span>
+                        <h3>24/7 Support</h3>
+                        <p class="mb-0">If you encounter any issues, you can directly contact us for assistance.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="untree_co-section count-numbers py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                <div class="counter-wrap">
+                    <div class="counter">
+                        <span class="" data-number="931">0</span>
+                    </div>
+                    <span class="caption">No. of Travels</span>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                <div class="counter-wrap">
+                    <div class="counter">
+                        <span class="" data-number="849">0</span>
+                    </div>
+                    <span class="caption">No. of Clients</span>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                <div class="counter-wrap">
+                    <div class="counter">
+                        <span class="" data-number="70">0</span>
+                    </div>
+                    <span class="caption">No. of Employees</span>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                <div class="counter-wrap">
+                    <div class="counter">
+                        <span class="" data-number="3">0</span>
+                    </div>
+                    <span class="caption">No. of Countries</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+!-- Destination Start -->
+<!-- Destination Start -->
+<style>
+    .destination-item {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+        .destination-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .destination-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .destination-item:hover .destination-overlay {
+        opacity: 1;
+    }
+
+    .destination-overlay h5 {
+        font-size: 24px;
+        color: #fff;
+        margin: 0;
+    }
+
+    .destination-overlay span {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .destination-overlay a {
+        text-decoration: none;
+    }
+</style>
+
+<div class="container-fluid py-5 ">
+    <div class="container pt-5 pb-3 ">
+        <div class="text-center mb-3 pb-3 ">
+            <h6 class="text-primary text-uppercase " style="letter-spacing: 5px; ">Destination</h6>
+            <h1>Explore Top Destination</h1>
+        </div>
+        <div class="row ">
+            <div class="col-lg-4 col-md-6 mb-4 ">
+                <div class="destination-item position-relative overflow-hidden mb-2" style="position: relative;">
+                    <img class="img-fluid" src="https://cdn.trips.pk/tours/images/tourimages/large/L_Murree-Pakistan.jpg" alt="error" style="width: 100%; height: auto;">
+                    <a class="destination-overlay text-white text-decoration-none" href="https://www.dreamstime.com/photos-images/muree.html" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; text-decoration: none;">
+                        <h5 class="text-white">Murree</h5>
+                        <span></span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 ">
+                <div class="destination-item position-relative overflow-hidden mb-2" style="position: relative;">
+                    <img class="img-fluid" src="https://cdn.wallpapersafari.com/31/52/mPNxbR.jpg" alt="" style="width: 100%; height: auto;">
+                    <a class="destination-overlay text-white text-decoration-none" href="https://unsplash.com/s/photos/kashmir" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; text-decoration: none;">
+                        <h5 class="text-white">Kashmir</h5>
+                        <span></span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 ">
+                <div class="destination-item position-relative overflow-hidden mb-2" style="position: relative;">
+                    <img class="img-fluid" src="https://pakistantourntravel.com/wp-content/uploads/2015/03/brown_bear_at_deosai_national_park.jpg" alt="" style="width: 100%; height: auto;">
+                    <a class="destination-overlay text-white text-decoration-none" href="https://www.alamy.com/stock-photo/deosai-plateau.html?sortBy=relevant" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; text-decoration: none;">
+                        <h5 class="text-white">Deosai Plans</h5>
+                        <span>Heaven on earth</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 ">
+                <div class="destination-item position-relative overflow-hidden mb-2" style="position: relative;">
+                    <img class="img-fluid" src="https://guidetopakistan.pk/wp-content/uploads/2021/04/Hunza-valley-1.jpg" alt="" style="width: 100%; height: auto;">
+                    <a class="destination-overlay text-white text-decoration-none" href="https://www.alamy.com/stock-photo/hunza-city.html?sortBy=relevant" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; text-decoration: none;">
+                        <h5 class="text-white">Hunza Valley</h5>
+                        <span></span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 ">
+                <div class="destination-item position-relative overflow-hidden mb-2" style="position: relative;">
+                    <img class="img-fluid" src="https://www.calamitytravels.com/wp-content/uploads/2022/04/Screenshot202022-01-2720at2013.07.27-scaled-1024x574.jpg" alt="" style="width: 100%; height: auto;">
+                    <a class="destination-overlay text-white text-decoration-none" href="https://www.shutterstock.com/search/skardu" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; text-decoration: none;">
+                        <h5 class="text-white">Skardu</h5>
+                        <span>Switzerland of Pakistan</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 ">
+                <div class="destination-item position-relative overflow-hidden mb-2" style="position: relative;">
+                    <img class="img-fluid" src="https://lovinpakistan.com/wp-content/uploads/2022/09/Shigar-Valley-A-dream-tourist-attraction-in-Skardu-1.jpg" alt="" style="width: 100%; height: auto;">
+                    <a class="destination-overlay text-white text-decoration-none" href="https://www.alamy.com/stock-photo/shigar.html?sortBy=relevant" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; text-decoration: none;">
+                        <h5 class="text-white">Shigar</h5>
+                        <span>Land of K2</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*
+<div class="untree_co-section">
+    <div class="container">
+        <div class="row text-center justify-content-center mb-5">
+            <div class="col-lg-7">
+                <h2 class="section-title text-center">Popular Destination</h2>
+            </div>
+        </div>
+
+        <div class="owl-carousel owl-3-slider">
+
+            <div class="item">
+                <a class="media-thumb" href="~/images" data-fancybox="gallery">
+                    <div class="media-text">
+                        <h3>Pragser Wildsee</h3>
+                        <span class="location">Italy</span>
+                    </div>
+                    <img src="~/images/hero-slider-1.jpg" alt="Image" class="img-fluid">
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="media-thumb" href="~/images/hero-slider-2.jpg" data-fancybox="gallery">
+                    <div class="media-text">
+                        <h3>Oia</h3>
+                        <span class="location">Greece</span>
+                    </div>
+                    <img src="~/images/hero-slider-2.jpg" alt="Image" class="img-fluid">
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="media-thumb" href="~/images/hero-slider-3.jpg" data-fancybox="gallery">
+                    <div class="media-text">
+                        <h3>Perhentian Islands</h3>
+                        <span class="location">Malaysia</span>
+                    </div>
+                    <img src="~/images/hero-slider-3.jpg" alt="Image" class="img-fluid">
+                </a>
+            </div>
+
+
+            <div class="item">
+                <a class="media-thumb" href="~/images/hero-slider-4.jpg" data-fancybox="gallery">
+                    <div class="media-text">
+                        <h3>Rialto Bridge</h3>
+                        <span class="location">Italy</span>
+                    </div>
+                    <img src="~/images/hero-slider-4.jpg" alt="Image" class="img-fluid">
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="media-thumb" href="~/images/hero-slider-5.jpg" data-fancybox="gallery">
+                    <div class="media-text">
+                        <h3>San Francisco, United States</h3>
+                        <span class="location">United States</span>
+                    </div>
+                    <img src="~/images/hero-slider-5.jpg" alt="Image" class="img-fluid">
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="media-thumb" href="~/images/hero-slider-1.jpg" data-fancybox="gallery">
+                    <div class="media-text">
+                        <h3>Lake Thun</h3>
+                        <span class="location">Switzerland</span>
+                    </div>
+                    <img src="~/images/hero-slider-2.jpg" alt="Image" class="img-fluid">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+*@
+
+<div class="untree_co-section testimonial-section mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+                <h2 class="section-title text-center mb-5">Clients Review</h2>
+
+                <div class="owl-single owl-carousel no-nav">
+                    <div class="testimonial mx-auto">
+                        <figure class="img-wrap">
+                            <img src="~/images/person_3.jpg" alt="Image" class="img-fluid">
+                        </figure>
+                        <h3 class="name">Ahmad</h3>
+                        <blockquote>
+                            <p>&ldquo;Thank you for the outstanding facilities and service during our trip. Everything was perfect, and we look forward to more destinations in the future..&rdquo;</p>
+                        </blockquote>
+                    </div>
+
+                    <div class="testimonial mx-auto">
+                        <figure class="img-wrap">
+                            <img src="~/images/person_1.jpg" alt="Image" class="img-fluid">
+                        </figure>
+                        <h3 class="name">Jafar</h3>
+                        <blockquote>
+                            <p>&ldquo;We had a fantastic experience with your travel company. The facilities were top-notch, and your team's attention to detail was impressive. We can 't wait to book our next adventure with you..&rdquo;</p>
+                        </blockquote>
+                    </div>
+
+                    <div class="testimonial mx-auto">
+                        <figure class="img-wrap">
+                            <img src="~/images/slider_3.jpg" alt="Image" class="img-fluid">
+                        </figure>
+                        <h3 class="name">Mr alax</h3>
+                        <blockquote>
+                            <p>&ldquo;Your travel company was great! Everything was awesome, and we'll definitely book with you again..&rdquo;</p>
+                        </blockquote>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="untree_co-section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-6">
+                <h2 class="section-title text-center mb-3">Special Offers &amp; Discounts</h2>
+                <p>"Get fantastic deals! Explore our special offers and discounts, making travel more affordable. Start your dream trip without spending a fortune!".</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                <div class="media-1">
+                    <a href="#" class="d-block mb-3"><img src="~/images/357696204_18206738062247761_4243262852206308792_n.jpg" alt="Image" class="img-fluid"></a>
+                    <span class="d-flex align-items-center loc mb-2">
+                        <span class="icon-room mr-3"></span>
+                        <span>k2</span>
+                    </span>
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <h3><a href="#">2nd highest Mountains</a></h3>
+                            <div class="price ml-auto">
+                                <span>$520.00</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                <div class="media-1">
+                    <a href="#" class="d-block mb-3"><img src="~/images/358653675_17886077960862988_3904116195486181420_n.jpg" alt="Image" class="img-fluid"></a>
+                    <span class="d-flex align-items-center loc mb-2">
+                        <span class="icon-room mr-3"></span>
+                        <span>Rakaposhi</span>
+                    </span>
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <h3><a href="#">gilgit baltistan</a></h3>
+                            <div class="price ml-auto">
+                                <span>$520.00</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                <div class="media-1">
+                    <a href="#" class="d-block mb-3"><img src="~/images/359418309_17886077951862988_1681495385526271712_n.jpg" alt="Image" class="img-fluid"></a>
+                    <span class="d-flex align-items-center loc mb-2">
+                        <span class="icon-room mr-3"></span>
+                        <span>G1,G2</span>
+                    </span>
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <h3><a href="#">G1,G2</a></h3>
+                            <div class="price ml-auto">
+                                <span>$750.00</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                <div class="media-1">
+                    <a href="#" class="d-block mb-3"><img src="~/images/a7.jpg" alt="Image" class="img-fluid"></a>
+
+                    <span class="d-flex align-items-center loc mb-2">
+                        <span class="icon-room mr-3"></span>
+                        <span>Sarfaranga</span>
+                    </span>
+
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <h3><a href="#">shigar</a></h3>
+                            <div class="price ml-auto">
+                                <span>$520.00</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="untree_co-section">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+
+            <div class="col-lg-6">
+                <figure class="img-play-video">
+                    <a id="play-video" class="video-play-button" href="https://kumailandtouragencybaltistantravel.files.wordpress.com/2022/06/vid-20220619-wa002628229.mp4" data-fancybox>
+                        <span></span>
+                    </a>
+                    <img src="~/images/akash.jpg" alt="Image" class="img-fluid rounded-20">
+                </figure>
+            </div>
+
+            <div class="col-lg-5">
+                <h2 class="section-title text-left mb-4">Take a look at Tour Video</h2>
+                <p>Explore our captivating travel and tours content! Watch and immerse yourself in our enticing destinations. Once captivated, join our tours to experience these remarkable places firsthand</p>
+
+                <p class="mb-4">
+                    Most of our clients come from Gilgit-Baltistan, but our company operates throughout Pakistan. You can avail our services anytime, anywhere across the country. We would be immensely grateful for your patronage.
+                </p>
+
+                <ul class="list-unstyled two-col clearfix">
+                    <li>Outdoor recreation activities</li>
+                    <li>Airlines</li>
+                    <li>Car Rentals</li>
+                    <li>Cruise Lines</li>
+                    <li>Hotels</li>
+                    <li>Railways</li>
+                    <li>Travel Insurance</li>
+                    <li>Package Tours</li>
+                    <li>Insurance</li>
+                    <li>Guide Books</li>
+                </ul>
+
+                <p><a href="/Home/Hotel/" class="btn btn-primary">Get Started</a></p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

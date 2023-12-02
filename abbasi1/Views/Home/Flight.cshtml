@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "Flight";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<div class="hero hero-inner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mx-auto text-center">
+                <div class="intro-wrap">
+                    <h1 class="mb-0">Our Gallery</h1>
+                    <p class="text-white">This is our wonderfull gallery .Step into Our Travel Company's Gallery: A Visual Odyssey of Unparalleled Experiences. Explore the world through our curated collection of unforgettable moments, encapsulating the essence of travel with our exceptional services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<body>
+    <div class="container" style="padding: 20px; background-color: #f2f2f2;">
+        <h1 class="section-heading" style="color: #333;">BOOKING FORM</h1>
+        <label for="BookName" style="font-weight: bold;">Book Name:</label>
+        <input type="text" id="BookName" placeholder="Enter Book Name" style="width: 200px; padding: 5px; margin-bottom: 10px;" />
+
+        <label for="BookPrice" style="font-weight: bold;">Booking CNIC:</label>
+        <input type="text" id="BookPrice" placeholder="Enter Book CNIC" style="width: 200px; padding: 5px; margin-bottom: 10px;" /><br>
+
+        <button id="BtnSubmit" style="padding: 8px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+    </div>
+   
+
+
+    <div id="BooksTable"></div>
+
+    <script>
+        $(document).ready(function () {
+            debugger
+            var dbBookId = "";
+            $("#BtnSubmit").click(function () {
+
+                var userBookName = $('#BookName').val();
+                var userBookPrice = $('#BookPrice').val();
+                var BookId = dbBookId;
+
+                var formData = new FormData();
+                formData.append('userBookName', userBookName);
+                formData.append('userBookPrice', userBookPrice);
+                formData.append('BookId', BookId);
+
+                $.ajax({
+                    url: '/Home/InsertTest',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        PageLoad();
+                    },
+                    error: function () {
+                        alert('An error occurred while sending the data');
+                    }
+                });
+            });
+            PageLoad();
+            function PageLoad() {
+                $.ajax({
+                    url: '/Home/BooksList',
+                    type: 'GET',
+                    success: function (data) {
+                        $('#BooksTable').html(data);
+                        $('#myTable thead tr').append('<td></td>');
+                        $('#myTable tbody tr').append('<td><input type="submit" class="btnDelete" value="Delete"></td>');
+                        $('#myTable tbody tr').append('<td><input type="submit" class="btnUpdate" value="Edit"></td>');
+
+                        $('.btnDelete').click(function () {
+                            var bookId = $(this).parent().parent().attr('tag');
+                            var formData = new FormData();
+                            formData.append('bookId', bookId);
+                            $.ajax({
+                                url: '/Home/Deletebooks',
+                                type: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function (response) {
+                                    PageLoad();
+                                },
+                                error: function () {
+                                    alert('An error occurred while sending the data');
+                                }
+                            });
+                        });
+
+                        $('.btnUpdate').click(function () {
+                            var bookId = $(this).parent().parent().attr('tag');
+                            var formData = new FormData();
+                            formData.append('bookId', bookId);
+                            $.ajax({
+                                url: '/Home/UpdateBook',
+                                type: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function (response) {
+                                    var BookDetails = JSON.parse(response);
+                                    dbBookId = BookDetails[0].Id;
+                                    $('#BookName').val(BookDetails[0].BookName);
+                                    $('#BookPrice').val(BookDetails[0].BookPrice);
+                                },
+                                error: function () {
+                                    alert('An error occurred while sending the data');
+                                }
+                            });
+                        });
+
+                    },
+                    error: function () {
+                        alert('An error occurred while fetching the book price.');
+                    }
+                });
+            }
+
+            $('#BookButton').click(function () {
+                $.ajax({
+                    url: '/Home/GetLastBookName',
+                    type: 'GET',
+                    success: function (data) {
+                        $('#LastBookName').val(data);
+                    },
+                    error: function () {
+                        alert('An error occurred while fetching the book name.');
+                    }
+                });
+            });
+
+            $('#PriceButton').click(function () {
+                $.ajax({
+                    url: '/Home/GetLastBookPrice',
+                    type: 'GET',
+                    success: function (data) {
+                        $('#LastBookPrice').val(data);
+                    },
+                    error: function () {
+                        alert('An error occurred while fetching the book price.');
+                    }
+                });
+            });
+        });
+
+
+
+    </script>
+</body>
+
